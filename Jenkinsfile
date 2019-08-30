@@ -1,24 +1,10 @@
 pipeline {
-    agent { dockerfile true }
-    stages {
-        stage('Test') {
-            steps {
-                sh 'pwd && ls -la'
-            }
-        }
-    }
-    post {
-        always {
-            echo 'This ran'
-        }
-        success {
-          echo 'This worked'
-        }
-        failure {
-            echo 'This didnt work'
-        }
-        changed {
-            echo "Change"
-        }
-    }
+	agent any
+	stages {
+		stage('Build') {
+			steps {
+				sh 'ls -la'
+			}
+		}
+	}
 }
