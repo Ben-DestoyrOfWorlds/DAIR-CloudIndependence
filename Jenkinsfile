@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'python --version && pwd && ls -la'
+                sh 'pwd && ls -la'
             }
         }
     }
