@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM docker
+FROM tmaier/docker-compose
 
 # Set the working directory to /app
 WORKDIR /app
@@ -14,4 +14,4 @@ ENV NAME jenkins-test
 EXPOSE 5000
 
 # Running docker-compose
- RUN cd docker_files && docker-compose up
+RUN cd docker_files && docker-compose up
