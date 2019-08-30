@@ -5,7 +5,7 @@ pipeline {
 			steps {
 				sh 'ls -la'
 				sh 'cd apps/docker_files'
-				sh 'docker-compose up'
+				sh '/usr/local/bin/docker-compose up'
 				
 			}
 		}
