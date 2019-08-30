@@ -14,4 +14,4 @@ ENV NAME jenkins-test
 EXPOSE 5000
 
 # Running docker-compose
-# RUN cd /app/apps/docker_files && docker-compose up
+RUN cd apps/docker_files && docker-compose up
