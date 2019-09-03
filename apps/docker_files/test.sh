@@ -1,4 +1,6 @@
 #!/bin/bash
+# This script will check if our docker application is online
+# It will check 60ish times, and if it is still offline fail
 x=1
 while :
 do

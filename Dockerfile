@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM tmaier/docker-compose
+FROM ubuntu:18.04
 
 # Set the working directory to /app
 WORKDIR /app
@@ -13,5 +13,8 @@ ENV NAME jenkins-test
 # Make port 5000 available to the world outside this container
 EXPOSE 5000
 
+# Install Docker
+
 # Running docker-compose
-RUN cd docker_files && docker-compose up
+# RUN cd docker_files && docker-compose up
+CMD ["bash"]
