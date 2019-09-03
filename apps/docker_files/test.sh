@@ -14,6 +14,8 @@ do
   fi
   if [ $x -gt 59 ]; then
     echo Timeout
+    cd apps/docker_files
+    /usr/local/bin/docker-compose down
     break
   fi
   x=`expr $x + 1`
