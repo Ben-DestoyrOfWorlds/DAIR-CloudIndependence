@@ -2,7 +2,7 @@
 x=0
 while :
 do
-  if curl -s http://127.0.0.1/polls/
+  if curl http://127.0.0.1/polls/
   then
     echo Up and running
     break
