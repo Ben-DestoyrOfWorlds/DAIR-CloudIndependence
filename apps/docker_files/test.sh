@@ -4,7 +4,7 @@
 x=1
 while :
 do
-  if curl http://172.17.0.1:8088/polls/
+  if curl http://172.17.0.1:8180/polls/
   then
     echo Up and running
     break
@@ -12,7 +12,7 @@ do
     echo Still waiting loop $x / 60
     sleep 10
   fi
-  if [ $x -gt 59 ]; then
+  if [ $x -gt 19 ]; then
     echo Timeout
     cd apps/docker_files
     /usr/local/bin/docker-compose down
