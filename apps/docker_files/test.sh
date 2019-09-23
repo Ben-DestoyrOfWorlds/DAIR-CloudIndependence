@@ -9,7 +9,7 @@ do
     echo Up and running
     break
   else
-    echo Still waiting loop $x / 60
+    echo Still waiting loop $x / 20
     sleep 10
   fi
   if [ $x -gt 19 ]; then
