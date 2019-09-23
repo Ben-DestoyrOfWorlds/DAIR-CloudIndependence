@@ -1,4 +1,6 @@
 #!/bin/bash
+INITPASS='nananaa'
+TESTPASS='goodbye'
 sudo apt-get update
 sudo apt-get install docker.io
 sudo docker run -d -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock --name jenkins -p 80:8080 -p 50000:50000 jenkins/jenkins:lts
@@ -14,5 +16,5 @@ do
 		break
 	fi
 done
-sleep 10
+sleep 5
 sudo docker restart jenkins
