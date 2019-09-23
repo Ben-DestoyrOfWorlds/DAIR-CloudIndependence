@@ -1,20 +1,11 @@
-# Use an official Python runtime as a parent image
-FROM ubuntu:18.04
-
-# Set the working directory to /app
-WORKDIR /app
-
-# Copy the current directory contents into the container at /app
-COPY apps/ /app
-
-# Define environment variable
-ENV NAME jenkins-test
-
-# Make port 5000 available to the world outside this container
-EXPOSE 5000
-
-# Install Docker
-
-# Running docker-compose
-# RUN cd docker_files && docker-compose up
-CMD ["bash"]
+#Dockerfile
+FROM jenkinsci/jenkins
+MAINTAINER Ben Leavitt <ben.leavitt@cybera.ca>
+USER root
+RUN apt-get update && apt-get install -y tree nano curl sudo
+RUN curl https://get.docker.com/builds/Linux/x86_64/docker-latest.tgz | tar xvz -C /tmp/ && mv /tmp/docker/docker /usr/bin/docker
+RUN curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+RUN chmod 755 /usr/local/bin/docker-compose
+RUN usermod -a -G sudo jenkins
+RUN echo "jenkins ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers
+USER jenkins

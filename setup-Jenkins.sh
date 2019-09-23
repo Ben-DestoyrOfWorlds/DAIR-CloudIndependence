@@ -3,11 +3,22 @@ INITPASS='nananaa'
 TESTPASS='goodbye'
 sudo apt-get update
 sudo apt-get install docker.io
-sudo docker run -d -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock --name jenkins -p 80:8080 -p 50000:50000 jenkins/jenkins:lts
+sudo docker build --tag=jenkins .
+sudo docker run -d \
+	-v jenkins_home:/var/jenkins_home \
+	-v /var/run/docker.sock:/var/run/docker.sock \
+	-v $(which docker):/usr/bin/docker \
+	--name jenkins \
+	-p 80:8080 \
+	-p 50000:50000 \
+	-u root \
+	jenkins:latest
+echo "Building containers"
 sleep 15
 echo "Initial Admin Password below"
 INITPASS=`sudo cat /var/lib/docker/volumes/jenkins_home/_data/secrets/initialAdminPassword`
 echo $INITPASS
+echo "Please visit your servers public IP to continue Jenkins setup"
 while :
 do
 	TESTPASS=`sudo cat /var/lib/docker/volumes/jenkins_home/_data/secrets/initialAdminPassword`
@@ -16,5 +27,7 @@ do
 		break
 	fi
 done
-sleep 5
+echo "Done setup! Waiting 10 seconds to restart jenkins"
+sleep 10
 sudo docker restart jenkins
+echo "Jenkins restarted, please check the servers local IP to verify everything is up and running"
