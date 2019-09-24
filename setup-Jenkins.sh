@@ -12,6 +12,7 @@ sudo docker run -d \
 	-p 8180:8080 \
 	-p 50000:50000 \
 	-u root \
+	--privileged \
 	jenkins:latest
 echo "Building containers"
 sleep 15
