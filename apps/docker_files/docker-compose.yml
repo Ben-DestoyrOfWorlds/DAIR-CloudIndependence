@@ -24,7 +24,7 @@ services:
       - "8000"
     depends_on:
       - postgres
-    command: bash -c 'python3 manage.py makemigrations && python3 manage.py migrate --noinput && python3 manage.py runserver --ipv6 "[::]:8000"'
+    command: bash -c 'python3 /src/manage.py makemigrations && python3 /src/manage.py migrate --noinput && python3 /src/manage.py runserver --ipv6 "[::]:8000"'
 
   nginx:
     image: nginx:latest
