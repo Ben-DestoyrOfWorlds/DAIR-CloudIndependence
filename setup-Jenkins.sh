@@ -16,7 +16,7 @@ sudo docker run -d \
 	jenkins:latest
 echo "Building containers"
 sleep 15
-#ln -s /var/lib/docker/volumes/jenkins_data /var/jenkins_home
+ln -s /var/lib/docker/volumes/jenkins_home/_data /var/jenkins_home
 echo "Initial Admin Password below"
 INITPASS=`sudo cat /var/lib/docker/volumes/jenkins_home/_data/secrets/initialAdminPassword`
 echo $INITPASS
