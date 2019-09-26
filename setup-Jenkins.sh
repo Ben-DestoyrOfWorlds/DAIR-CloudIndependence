@@ -16,7 +16,6 @@ sudo docker run -d \
 	jenkins:latest
 echo "Building containers"
 sleep 15
-ln -s /var/lib/docker/volumes/jenkins_home/_data /var/jenkins_home
 echo "Initial Admin Password below"
 INITPASS=`sudo cat /var/lib/docker/volumes/jenkins_home/_data/secrets/initialAdminPassword`
 echo $INITPASS
@@ -32,4 +31,5 @@ done
 echo "Done setup! Waiting 10 seconds to restart jenkins"
 sleep 10
 sudo docker restart jenkins
+sudo ln -s /var/lib/docker/volumes/jenkins_home/_data /var/jenkins_home
 echo "Jenkins restarted, please check the servers local IP to verify everything is up and running"
