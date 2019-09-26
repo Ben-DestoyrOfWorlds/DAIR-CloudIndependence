@@ -9,10 +9,10 @@ do
     echo Up and running
     break
   else
-    echo Still waiting loop $x / 20
+    echo Still waiting loop $x / 60
     sleep 10
   fi
-  if [ $x -gt 19 ]; then
+  if [ $x -gt 59 ]; then
     echo Timeout
     cd apps/docker_files
     /usr/local/bin/docker-compose down
