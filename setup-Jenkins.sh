@@ -33,13 +33,11 @@ IP4=`curl -s4 ifconfig.co`
 IP6=`curl -s6 ifconfig.co`
 echo "IPv4: http://$IP4:8180"
 echo "IPv6: http://[$IP6]:8180"
-while :
+TEST=`sudo ls /var/lib/docker/volumes/jenkins_home/_data/secrets/ | grep initialAdminPassword`
+while [[ "$TEST" != "" ]]
 do
-	TESTPASS=`sudo cat /var/lib/docker/volumes/jenkins_home/_data/secrets/initialAdminPassword`
-	if [ "$TESTPASS" != "$INITPASS" ]; then
-		echo $TESTPASS
-		break
-	fi
+        sleep 2
+        TEST=`sudo ls /var/lib/docker/volumes/jenkins_home/_data/secrets/ | grep initialAdminPassword`
 done
 echo "Done setup! Waiting 10 seconds to restart jenkins"
 sleep 6
