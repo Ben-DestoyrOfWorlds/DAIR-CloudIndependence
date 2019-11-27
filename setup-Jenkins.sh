@@ -39,8 +39,8 @@ do
         sleep 2
         TEST=`sudo ls /var/lib/docker/volumes/jenkins_home/_data/secrets/ | grep initialAdminPassword`
 done
-echo "Done setup! Waiting 10 seconds to restart jenkins"
-sleep 6
+echo "Done setup! Restarting Jenkins"
+sleep 5
 sudo docker restart jenkins
 sudo ln -s /var/lib/docker/volumes/jenkins_home/_data /var/jenkins_home
 echo "Jenkins restarted, please check the servers local IP to verify everything is up and running"
