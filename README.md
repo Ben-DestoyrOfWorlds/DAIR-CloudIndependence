@@ -170,7 +170,7 @@ securing these settings with more appropriate defaults:
   appropriately limited.
 
 # Tool Descriptions
-##Python and Django - Application Language and Framework
+## Python and Django - Application Language and Framework
 Python is an open source scripting language popular for its approachability. As a high level language most of the code is human readable. As an interpreted language Python scripts are flexible and portable.
 
 Django is a framework written in Python that streamlines development of web applications.
