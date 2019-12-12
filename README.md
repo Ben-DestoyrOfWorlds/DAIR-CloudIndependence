@@ -1,4 +1,4 @@
-This repository contains the code for the DAIR Cloud Independence Tutorial 1
+This repository contains the code used for Cybera DAIR Cloud Independence Tutorials
 
 # Repository Basics
 
@@ -168,3 +168,43 @@ securing these settings with more appropriate defaults:
 
 * `ALLOWED_HOSTS` in Django is set to `*`. In production, this should be
   appropriately limited.
+
+# Tool Descriptions
+##Python and Django - Application Language and Framework
+Python is an open source scripting language popular for its approachability. As a high level language most of the code is human readable. As an interpreted language Python scripts are flexible and portable.
+
+Django is a framework written in Python that streamlines development of web applications.
+
+## Git - Source Control Versioning and Management
+Git is a distributed version control system (DVCS) supporting history, branching, tagging, and conflict merging. Hosted git collaboration is supported by many providers (GitHub, etc.) as well as open source self hosted solutions.
+
+## Nginx - Load balancer and reverse proxy
+Nginx [engine x] is an open source flexible reverse proxy that securely processes connections and relays them to an application service. Nginx can also terminate SSL connections, directly serve static content, and perform caching.
+
+## PostgreSQL - Database Server
+PostgreSQL is an object-relational database that holds our tutorial applications dynamic data. PostgreSQL is open source and very mature with over 30 years of development behind it.
+
+Many public cloud providers offer managed PostgreSQL databases, or it can be self hosted as we have done in the tutorial.
+
+## Terraform - Multi-Cloud deployment tool
+Terraform is an infrastructure as code tool that provisions and configures compute, storage, networking, and many other resources needed for your applications.
+
+Terraform uses infrastructure blueprints to build components on your chosen cloud provider. Terraform blueprints can be stored in git or other SCM tools facilitating version control and other best practices.
+
+## Docker - Container Service
+Docker is a container tool that builds and manages portable application environments. Lighter than virtual machines containers bundle code, tools, libraries, network layout, and overall environment configuration. Docker allows an application stack to run anywhere the docker service is available. Bundled requirements and interconnections remove many distribution and mobility challenges.
+
+## Rclone - Cloud data copying tool
+rclone is a lightweight tool for copying data around various cloud targets. Highly configurable, rclone will run on and talk to most storage systems allowing you to use one tool to move data between nearly all your clouds.
+
+## Sensu - Service health monitor
+Sensu (specifically Sensu Go) is an open source telemetry and service health checking solution. Easy to setup and highly scalable Sensu is designed to monitor systems across clouds. Sensu Go can also act as an event pipeline facilitating automation.
+
+## Grafana - Data visualization
+Grafana is an open source analytics & monitoring solution for every database. It works with other tools to collect and visualize data. Grafana can collect data from many sources, such as InfluxDB as shown in our tutorial. 
+
+## InfluxDB - Time Series Database
+InfluxDB is the open source time series database of our metrics that Grafana will query for visualization.
+
+## Jenkins - Automation and CI/CD Platform
+Jenkins is a mature open source automation server that is a popular CI/CD tool partially due to the large number of available plugins.
