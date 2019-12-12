@@ -124,31 +124,15 @@ make apply ENV=openstack
 
 > Note: If the process times out, you can try re-running the command again.
 
-You can now access your application at: http://<public_ip>/polls.
+You can now access your application at: http://public_ip/polls.
+You can admin your application at: http://public_ip/admin
+username `admin` and password `P@ssw0rd!`
 
-Sensu/Monitoring can be viewed at http://<public_ip>:3000/. You can log in with
-username `admin` and password `P@ssw0rd!`.
+Sensu/Monitoring can be viewed at http://public_ip:3000/. You can log in with
+username `admin` and password `P@ssw0rd!`
 
-Grafana/Metrics can be viewed at http://<public_ip>:3000/grafana. You can log
+Grafana/Metrics can be viewed at http://public_ip:3000/grafana. You can log
 in with username `admin` and password `P@ssw0rd!`
-
-# Environment Usage
-## Django Poll App
-Once the environment has been built you can access the poll app via the public IP address of the newly deployed server. You should get this information from the console, or you can check at your targeted cloud provider.
-
-You can manage polls at <ip>/admin
-You can view pools at <ip>/polls
-  
-Admin User: admin
-Admin Pass: P@ssw0rd!
-
-## Grafana
-To access the Grafana dashboard visit: http://<ip>:3000/grafana
-User “admin” for the username and “P@ssw0rd!”
-
-## Sensu
-To access the Sensu dashboard visit: http://<ip>:3000
-User “admin” for the username and “P@ssw0rd!” for the password.
 
 # Tear Down
 
