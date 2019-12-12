@@ -132,6 +132,24 @@ username `admin` and password `P@ssw0rd!`.
 Grafana/Metrics can be viewed at http://<public_ip>:3000/grafana. You can log
 in with username `admin` and password `P@ssw0rd!`
 
+# Environment Usage
+## Django Poll App
+Once the environment has been built you can access the poll app via the public IP address of the newly deployed server. You should get this information from the console, or you can check at your targeted cloud provider.
+
+You can manage polls at <ip>/admin
+You can view pools at <ip>/polls
+  
+Admin User: admin
+Admin Pass: P@ssw0rd!
+
+## Grafana
+To access the Grafana dashboard visit: http://<ip>:3000/grafana
+User “admin” for the username and “P@ssw0rd!”
+
+## Sensu
+To access the Sensu dashboard visit: http://<ip>:3000
+User “admin” for the username and “P@ssw0rd!” for the password.
+
 # Tear Down
 
 When you're finished with the tutorial, you can delete all cloud resources
@@ -168,6 +186,8 @@ securing these settings with more appropriate defaults:
 
 * `ALLOWED_HOSTS` in Django is set to `*`. In production, this should be
   appropriately limited.
+  
+* In terraform/aws/terraform.tfvars a hard coded `allowed_net` variable is set to 0.0.0.0/0 allowing all traffic to the demo instnace. This should be looked into and secured if you would like to block general web traffic.
 
 # Tool Descriptions
 ## Python and Django - Application Language and Framework
