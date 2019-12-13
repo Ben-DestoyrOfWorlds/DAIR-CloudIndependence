@@ -155,7 +155,7 @@ ssh -i key/id_rsa ubuntu@<public_ip>
 Then run:
 
 ```
-docker ps -a
+sudo docker ps -a
 ```
 
 # Updating your application
