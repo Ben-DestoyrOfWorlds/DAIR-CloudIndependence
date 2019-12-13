@@ -160,7 +160,20 @@ sudo docker ps -a
 
 # Updating your application
 
-Once you have changes to your application you wish to deploy you can do so by:
+Once you have changes to your application you wish to deploy you can do so by 
+making changes to the `apps/docker_files` folder. 
+
+Inside we have our `app` folder that holds the example application data. This 
+is where you would put your custom code and following updates. You can modify 
+the application docker container by editing the `apps/docker_files/app/Dockerfile` 
+file. This file sets the base Docker image, environment variables, and various 
+commands and files needed for container setup.
+
+Inside the same `apps/docker_files` folder we have the `docker-compose.yml` file. 
+Here you can find the app: service and make changes accordingly. You can see where 
+the app folder is mounted on the docker instance, behaviour on failure, exposed 
+ports, what services the container depends on, and the commands executed on the 
+server to start your application.
 
 ### Security Gotchas
 
