@@ -1,6 +1,6 @@
 #!/bin/bash
-INITPASS='nananaa'
-TESTPASS='goodbye'
+INITPASS='nananaatahhh'
+TESTPASS='goodbyeasdf'
 sudo apt-get update
 sudo apt-get install docker.io
 sudo docker build --tag=jenkins .
