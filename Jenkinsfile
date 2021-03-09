@@ -3,6 +3,7 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
+                                sh 'echo hi'
 				sh 'ls -la'
 				sh 'cd apps/docker_files && bash -c "/usr/local/bin/docker-compose up >> ~/log 2>&1" &'
 			}
