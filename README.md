@@ -2,11 +2,12 @@ This repository contains the code used for Cybera DAIR Cloud Independence Tutori
 
 #
 # Repository Basics
-# ya
+#
 
-#Hooo
+#
+# More stuff here
+# 
 
-no
 The repository structure is as below:
 
 * `/bin`: contains Terraform binaries for Mac and Linux.
