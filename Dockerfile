@@ -1,5 +1,4 @@
 #Dockerfile
-#Line
 FROM jenkins/jenkins:lts
 MAINTAINER Ben Leavitt <ben.leavitt@cybera.ca>
 USER root

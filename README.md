@@ -16,6 +16,8 @@ The repository structure is as below:
 
 # Prerequisites
 
+# Some stuff
+
 * Mac or Linux-based workstation.
 * Access to a cloud provider (ex. Openstack, AWS, Azure)
 
